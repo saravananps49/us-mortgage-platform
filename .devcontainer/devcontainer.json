@@ -1,17 +1,7 @@
 {
   "name": "US Mortgage Loan Portal",
 
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
-
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-
-  "forwardPorts": [
-    3000,
-    4000,
-    27017
-  ],
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
 
   "customizations": {
     "vscode": {
@@ -23,7 +13,10 @@
     }
   },
 
-  "postCreateCommand": "npm --version && node --version",
+  "forwardPorts": [
+    3000,
+    4000
+  ],
 
   "remoteUser": "vscode"
 }
