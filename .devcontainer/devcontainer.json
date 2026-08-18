@@ -4,13 +4,14 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
 
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
 
   "forwardPorts": [
     3000,
     4000,
-    27017
+    27017,
+    8080
   ],
 
   "customizations": {
@@ -23,8 +24,6 @@
       ]
     }
   },
-
-  "postCreateCommand": "npm --version && node --version",
 
   "remoteUser": "vscode"
 }
